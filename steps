@@ -1,1 +1,13 @@
+import pandas as pd
+df = pd.read_csv("Titanic_last.csv")
 
+
+
+from ydata_profiling import ProfileReport
+profile = ProfileReport(df, explorative=True)
+profile.to_file("output.html")
+
+
+
+from IPython.display import HTML
+HTML(open("output.html").read())

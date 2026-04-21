@@ -1,0 +1,3 @@
+import sweetviz as sv
+my_report = sv.analyze(df)
+my_report.show_html()
